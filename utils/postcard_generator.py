@@ -18,10 +18,8 @@ async def make_postcard(text: str, category: str, template: str) -> bytes:
     with open(f"postcards/{category}/{template}/index.html") as index_page:
         page = index_page.read()
 
-    page = page.replace(
-        '{{ TEXT }}',
-        text
-    )
+    page = page.replace('{{ TEXT }}', text)
+
     with open(f'postcards/{category}/{template}/page_temp_{current_time}.html', 'w') as file:
         file.write(page)
 

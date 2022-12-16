@@ -3,22 +3,15 @@ import os
 import re
 
 from pyppeteer import launch
-# from utils.postcard_image_generator.page import page_template
-# from utils.postcard_image_generator.page1 import page_template_1
-# from utils.postcard_image_generator.page2 import page_template_2
-
-
-def make_text(input_text):
-    return re.sub(r'<.*?>', '', input_text)
 
 
 async def make_postcard(text: str, category: str, template: str) -> bytes:
     current_time = datetime.datetime.now()
-    text = make_text(text)
+    text = re.sub(r'<.*?>', '', text)
     with open(f"postcards/{category}/{template}/index.html") as index_page:
         page = index_page.read()
 
-    page = page.replace('{{ TEXT }}', text)
+    page = page.replace('{{ TEXT }}', text.replace("\n", "<br>"))
 
     with open(f'postcards/{category}/{template}/page_temp_{current_time}.html', 'w') as file:
         file.write(page)

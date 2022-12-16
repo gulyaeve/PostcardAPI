@@ -7,9 +7,9 @@ from utils.system import get_categories, get_postcard_preview, get_postcards_lis
 app = FastAPI()
 
 
-# @app.get("/")
-# async def root():
-#     return {"message": "Hello World"}
+@app.get("/")
+async def root():
+    return {"message": "Postcard generator API"}
 
 
 @app.get(

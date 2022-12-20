@@ -26,7 +26,7 @@ async def root():
     # https://github.com/tiangolo/fastapi/issues/3258
     response_class=Response
 )
-async def get_preview(category: str = "say_thanks", template: str = "picture0"):
+async def get_preview(category: str = "Скажи спасибо", template: str = "picture0"):
     image_bytes: bytes = await get_postcard_preview(category, template)
     return Response(content=image_bytes, media_type="image/png")
 
@@ -38,7 +38,7 @@ async def get_types():
 
 
 @app.get("/postcards")
-async def get_postcards_by_type(category: str = "say_thanks"):
+async def get_postcards_by_type(category: str = "Скажи спасибо"):
     postcards = await get_postcards_list(category)
     return JSONResponse({"data": postcards})
 
@@ -57,6 +57,6 @@ async def get_postcards_by_type(category: str = "say_thanks"):
     # https://github.com/tiangolo/fastapi/issues/3258
     response_class=Response
 )
-async def get_postcard(text: str = "test", category: str = "say_thanks", template: str = "picture0"):
+async def get_postcard(text: str = "test", category: str = "Скажи спасибо", template: str = "picture0"):
     image_bytes: bytes = await make_postcard(text, category, template)
     return Response(content=image_bytes, media_type="image/png")

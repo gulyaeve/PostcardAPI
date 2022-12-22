@@ -12,52 +12,56 @@
       .left, .right, .center {
         margin: -5px 0;
       }
+      .main {
+        display: table;
+        margin: 25px auto;
+      }
       .center.p1 {
         background: url('center_1.png') repeat-x;
-        height: 476px;
-        min-width: 369px;
+        height: 333px;
+        min-width: 827px;
       }
       .center.p2 {
         background: #a31d1d;
         min-width: 100px;
-        max-width: 369px;
-        min-height: 53px;
+        max-width: 827px;
+        min-height: 510px;
         height: auto;
       }
       .center.p3 {
         background: url('center_3.png') repeat-x;
-        height: 552px;
-        min-width: 369px;
+        height: 238px;
+        min-width: 827px;
       }
       .left.p1 {
         background: url('left_1.png') repeat-y;
-        height: 476px;
-        width: 670px;
+        height: 469px;
+        width: 554px;
       }
       .left.p2 {
         background: url('left_2.png') repeat-y;
-        width: 670px;
-        min-height: 53px;
+        width: 554px;
+        min-height: 55px;
       }
       .left.p3 {
         background: url('left_3.png') repeat-y;
-        height: 552px;
-        width: 670px;
+        height: 556px;
+        width: 554px;
       }
       .right.p1 {
         background: url('right_1.png') repeat-y;
-        width: 882px;
-        height: 476px;
+        width: 539px;
+        height: 469px;
       }
       .right.p2 {
         background: url('right_2.png') repeat-y;
-        width: 882px;
-        height: 53px;
+        width: 539px;
+        height: 54px;
       }
       .right.p3 {
         background: url('right_3.png') repeat-y;
-        width: 882px;
-        height: 552px;
+        width: 539px;
+        height: 556px;
       }
 
       .text {
@@ -107,8 +111,8 @@
          console.log('Start');
          var cen_str = getComputedStyle(document.getElementById("center-main")).height;
          var cenHeight = cen_str.replace(/[a-zа-яё]/gi, '');
-         document.getElementById('left-p2').style.height = (Number(cenHeight) - 1008) + 'px';
-         document.getElementById('right-p2').style.height = (Number(cenHeight) - 1008) + 'px';
+         document.getElementById('left-p2').style.height = (Number(cenHeight) - 1004) + 'px';
+         document.getElementById('right-p2').style.height = (Number(cenHeight) - 1004) + 'px';
          console.log(Number(cenHeight));
       };
     </script>

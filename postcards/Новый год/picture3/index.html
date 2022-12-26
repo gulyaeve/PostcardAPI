@@ -8,7 +8,7 @@
       	font-family: 'Bebas';
       	src: url(font.ttf);
       }
-      body {background: #7777f2;}
+      body {background: #5273c6;}
       .left, .right, .center {
         margin: -5px 0;
       }
@@ -18,50 +18,50 @@
       }
       .center.p1 {
         background: url('center_1.png') repeat-x;
-        height: 248px;
-        min-width: 834px;
+        height: 283px;
+        min-width: 804px;
       }
       .center.p2 {
-        background: #7777f2;
+        background: #5273c6;
         min-width: 100px;
-        max-width: 834px;
-        min-height: 777px;
+        max-width: 804px;
+        min-height: 493px;
         height: auto;
       }
       .center.p3 {
         background: url('center_3.png') repeat-x;
         height: 238px;
-        min-width: 834px;
+        min-width: 804px;
       }
       .left.p1 {
         background: url('left_1.png') repeat-y;
-        height: 248px;
-        width: 547px;
+        height: 283px;
+        width: 552px;
       }
       .left.p2 {
         background: url('left_2.png') repeat-y;
-        width: 547px;
-        min-height: 85px;
+        width: 552px;
+        min-height: 49px;
       }
       .left.p3 {
         background: url('left_3.png') repeat-y;
-        height: 747px;
-        width: 547px;
+        height: 681px;
+        width: 552px;
       }
       .right.p1 {
         background: url('right_1.png') repeat-y;
-        width: 539px;
-        height: 248px;
+        width: 564px;
+        height: 283px;
       }
       .right.p2 {
         background: url('right_2.png') repeat-y;
-        width: 539px;
-        height: 85px;
+        width: 564px;
+        height: 52px;
       }
       .right.p3 {
         background: url('right_3.png') repeat-y;
-        width: 539px;
-        height: 747px;
+        width: 564px;
+        height: 680px;
       }
 
       .text {
@@ -91,7 +91,7 @@
         </div>
         <div class="center p2">
           <div class="center p2 text-block" style="display:flex; height: 100%;">
-            <h1 class="text">{{ TEXT }} </h1>
+            <h1 class="text"> {{ TEXT }} </h1>
           </div>
         </div>
         <div class="center p3">
@@ -111,8 +111,8 @@
          console.log('Start');
          var cen_str = getComputedStyle(document.getElementById("center-main")).height;
          var cenHeight = cen_str.replace(/[a-zа-яё]/gi, '');
-         document.getElementById('left-p2').style.height = (Number(cenHeight) - 975) + 'px';
-         document.getElementById('right-p2').style.height = (Number(cenHeight) - 975) + 'px';
+         document.getElementById('left-p2').style.height = (Number(cenHeight) - 944) + 'px';
+         document.getElementById('right-p2').style.height = (Number(cenHeight) - 943) + 'px';
          console.log(Number(cenHeight));
       };
     </script>

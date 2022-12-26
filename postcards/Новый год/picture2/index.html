@@ -8,7 +8,7 @@
       	font-family: 'Bebas';
       	src: url(font.ttf);
       }
-      body {background: #5273c6;}
+      body {background: #a31d1d}
       .left, .right, .center {
         margin: -5px 0;
       }
@@ -18,50 +18,50 @@
       }
       .center.p1 {
         background: url('center_1.png') repeat-x;
-        height: 283px;
-        min-width: 804px;
+        height: 333px;
+        min-width: 827px;
       }
       .center.p2 {
-        background: #5273c6;
+        background: #a31d1d;
         min-width: 100px;
-        max-width: 804px;
-        min-height: 493px;
+        max-width: 827px;
+        min-height: 510px;
         height: auto;
       }
       .center.p3 {
         background: url('center_3.png') repeat-x;
         height: 238px;
-        min-width: 804px;
+        min-width: 827px;
       }
       .left.p1 {
         background: url('left_1.png') repeat-y;
-        height: 283px;
-        width: 552px;
+        height: 469px;
+        width: 554px;
       }
       .left.p2 {
         background: url('left_2.png') repeat-y;
-        width: 552px;
-        min-height: 49px;
+        width: 554px;
+        min-height: 55px;
       }
       .left.p3 {
         background: url('left_3.png') repeat-y;
-        height: 681px;
-        width: 552px;
+        height: 556px;
+        width: 554px;
       }
       .right.p1 {
         background: url('right_1.png') repeat-y;
-        width: 564px;
-        height: 283px;
+        width: 539px;
+        height: 469px;
       }
       .right.p2 {
         background: url('right_2.png') repeat-y;
-        width: 564px;
-        height: 52px;
+        width: 539px;
+        height: 54px;
       }
       .right.p3 {
         background: url('right_3.png') repeat-y;
-        width: 564px;
-        height: 680px;
+        width: 539px;
+        height: 556px;
       }
 
       .text {
@@ -111,8 +111,8 @@
          console.log('Start');
          var cen_str = getComputedStyle(document.getElementById("center-main")).height;
          var cenHeight = cen_str.replace(/[a-zа-яё]/gi, '');
-         document.getElementById('left-p2').style.height = (Number(cenHeight) - 944) + 'px';
-         document.getElementById('right-p2').style.height = (Number(cenHeight) - 943) + 'px';
+         document.getElementById('left-p2').style.height = (Number(cenHeight) - 1004) + 'px';
+         document.getElementById('right-p2').style.height = (Number(cenHeight) - 1004) + 'px';
          console.log(Number(cenHeight));
       };
     </script>
